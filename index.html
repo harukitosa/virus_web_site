@@ -20,6 +20,7 @@
     function setup() {
         createCanvas(windowWidth, windowHeight);
         textSize(45);
+        fill(0);
         text('自宅', windowWidth / 2, windowHeight / 2);
         for (var i = 0; i < 30; i++) {
             textSize(32);
@@ -28,7 +29,6 @@
     }
 
     function draw() {
-        fill(0);
         textSize(32);
         fill(255, 204, 0);
         text('コロナ', mouseX, mouseY);
@@ -42,6 +42,7 @@
     function windowResized() {
         resizeCanvas(windowWidth, windowHeight);
         textSize(45);
+        fill(0);
         text('自宅', windowWidth / 2, windowHeight / 2);
         for (var i = 0; i < 30; i++) {
             textSize(32);
