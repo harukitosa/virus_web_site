@@ -41,5 +41,11 @@
 
     function windowResized() {
         resizeCanvas(windowWidth, windowHeight);
+        textSize(45);
+        text('自宅', windowWidth / 2, windowHeight / 2);
+        for (var i = 0; i < 30; i++) {
+            textSize(32);
+            text('人', random(windowWidth), random(windowHeight));
+        }
     }
 </script>
