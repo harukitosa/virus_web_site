@@ -1,6 +1,10 @@
 <html>
+<html lang="ja">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コロナウイルスサイト！！</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
     <script src="sketch.js"></script>
 </head>
@@ -12,15 +16,27 @@
 </html>
 
 <script>
+    var count = 0;
     function setup() {
         createCanvas(windowWidth, windowHeight);
+        textSize(45);
+        text('自宅', windowWidth / 2, windowHeight / 2);
+        for (var i = 0; i < 30; i++) {
+            textSize(32);
+            text('人', random(windowWidth), random(windowHeight));
+        }
     }
 
     function draw() {
-
         fill(0);
-        textSize(12);
+        textSize(32);
+        fill(255, 204, 0);
         text('コロナ', mouseX, mouseY);
+        count++;
+        if (count > 800) {
+            alert("コロナウイルス対策のために今できること。動き回るのはやめて自宅待機しよう!");
+            count = 0;
+        }
     }
 
     function windowResized() {
